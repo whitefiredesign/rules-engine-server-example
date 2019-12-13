@@ -1,0 +1,22 @@
+{
+  "conditions": {
+    "any": [
+      {
+        "fact": "width",
+        "operator": "notEqual",
+        "value": 300
+      },
+      {
+        "fact": "height",
+        "operator": "notEqual",
+        "value": 200
+      }
+    ]
+  },
+  "event": {
+    "type": "navbox",
+    "params": {
+      "message": "Thumbnail image needs to be 300 x 200"
+    }
+  }
+}

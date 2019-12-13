@@ -1,0 +1,17 @@
+{
+    "conditions": {
+        "any": [
+            {
+                "fact": "charcount",
+                "operator": "greaterThan",
+                "value": 20
+            }
+        ]
+    },
+    "event": {
+        "type": "navbox",
+        "params": {
+            "message": "Characters are limited to 20"
+        }
+    }
+}

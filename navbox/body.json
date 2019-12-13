@@ -1,0 +1,22 @@
+{
+  "conditions": {
+    "any": [
+      {
+        "fact": "charcount",
+        "operator": "greaterThan",
+        "value": 400
+      },
+      {
+        "fact": "charcount",
+        "operator": "lessThan",
+        "value": 200
+      }
+    ]
+  },
+  "event": {
+    "type": "navbox",
+    "params": {
+      "message": "Character count must be more than 200 and less than 400"
+    }
+  }
+}

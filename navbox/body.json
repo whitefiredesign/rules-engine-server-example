@@ -16,7 +16,7 @@
   "event": {
     "type": "navbox",
     "params": {
-      "message": "Character count must be more than 200 and less than 400"
+      "message": "Character count must be greater than 200 and less than 400"
     }
   }
 }

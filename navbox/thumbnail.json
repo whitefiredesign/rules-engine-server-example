@@ -9,14 +9,14 @@
       {
         "fact": "height",
         "operator": "notEqual",
-        "value": 200
+        "value": 300
       }
     ]
   },
   "event": {
     "type": "navbox",
     "params": {
-      "message": "Thumbnail image needs to be 300 x 200"
+      "message": "Thumbnail image needs to be 300 x 300"
     }
   }
 }

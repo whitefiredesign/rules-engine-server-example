@@ -12,8 +12,8 @@ functions:
       - http:
           path: /
           method: ANY
-          cors: true
+          cors: false
       - http:
           path: /{proxy+}
           method: ANY
-          cors: true
+          cors: false

@@ -9,9 +9,10 @@
   "dependencies": {
     "@babel/core": "^7.7.4",
     "@babel/preset-env": "^7.7.4",
-    "babel-loader": "^8.0.6",
     "@babel/register": "^7.7.4",
+    "babel-loader": "^8.0.6",
     "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "json-rules-engine": "^5.0.0",
     "node-fetch": "^2.6.0",

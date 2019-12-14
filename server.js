@@ -1,32 +1,36 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import serverless from 'serverless-http';
+import cors from 'cors';
+import path from 'path';
 import { Engine } from 'json-rules-engine';
 import { readFile, existsSync } from 'fs';
 
-let engine =
-    new Engine();
 const app =
     express();
 
 app.use(
     bodyParser.json()
 );
+app.use(cors());
 
 app.post('/rules/:pattern/:field', function(req, res) {
+    let engine =
+        new Engine();
+
     const { pattern, field } =
         req.params;
     const { body } =
         req;
-    const facts =
-        './' + pattern + '/' + field + '.json';
+    const rules =
+        path.resolve('./' + pattern + '/' + field + '.json');
     const payload = {
         pattern,
         field,
         body
     };
 
-    if(!existsSync(facts)) {
+    if(!existsSync(rules)) {
         res.send({
             'status' : 500,
             'pass' : false,
@@ -37,7 +41,7 @@ app.post('/rules/:pattern/:field', function(req, res) {
         return;
     }
 
-    readFile(facts,
+    readFile(rules,
         (err, data) => {
             if (err) res.send(err);
 
@@ -82,8 +86,8 @@ app.post('/rules/:pattern/:field', function(req, res) {
     return false;
 });
 
-/*app.listen(3001, () =>
-    console.log('Rules engine listening on port 3001!')
+/*app.listen(3000, () =>
+    console.log('Rules engine listening on port 3000!')
 );*/
 
 module.exports.handler = serverless(app);

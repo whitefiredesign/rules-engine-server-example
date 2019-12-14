@@ -5,13 +5,18 @@
                 "fact": "charcount",
                 "operator": "greaterThan",
                 "value": 20
+            },
+            {
+                "fact": "charcount",
+                "operator": "lessThan",
+                "value": 3
             }
         ]
     },
     "event": {
         "type": "navbox",
         "params": {
-            "message": "Characters are limited to 20"
+            "message": "Character count must be greater than 3 and less than 20"
         }
     }
 }

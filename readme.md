@@ -4,6 +4,8 @@ A simple Rules Engine fact checking demo showing
 how a rules engine can be used to automate the auditing 
 of design pattern policies within content management systems.
 
+This example is for a simply Navbox.
+
 ## Deploy
 Deploy to serverless function
 
